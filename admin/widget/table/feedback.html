@@ -1,0 +1,24 @@
+<tr>
+		<td> <?= $row['id'] ?> </td>
+		<td> <?= $row['name'] ?> </td>
+		<td> <?= $row['email'] ?> </td>
+		<td> <?= $row['message'] ?> </td>
+		<td> <img src="../feedback_images/<?=  $row['image'] ?>"> </td>
+		<td> <?= $row['feedbackdate'] ?> </td>
+		<td> <? if ($row['checked']): ?> 
+				<i class="icon-eye checked"> </i>
+			 <? else: ?> 
+			 	<i class="icon-eye"> </i>
+			 <? endif ?> 
+		</td>
+		<td> <? if ($row['visible']): ?> 
+				<i class="icon-eye checked"> </i>
+			 <? else: ?> 
+			 	<i class="icon-eye"> </i>
+			 <? endif ?> 
+		</td>
+	<? if ($control): ?>
+		<td> <button class="btn btn-success edit" rel="<?= $row['id'] ?>"> Редактировать </button> </td>
+		<td> <button class="btn btn-danger remove" rel="<?= $row['id'] ?>"> Удалить </button> </td>
+	<? endif ?>
+</tr>

@@ -1,0 +1,21 @@
+#requestTable i {
+	font-size: 32px;
+	opacity: 0.5;
+}
+
+#requestTable i.checked {
+	opacity: 1;
+}
+
+div.card {
+	width: 60% !important;
+}
+
+.btn {
+	cursor: pointer;
+}
+
+#requestTable img {
+	width: 100px;
+	height: 100px;
+}

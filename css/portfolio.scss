@@ -1,0 +1,129 @@
+$main-font: "Roboto", sans-serif; 
+$second-font: "Arial",  sans-serif; 
+$main-background-color: #f9f9f9; 
+$additional-background-color: #3A0808; 
+$main-link-color: #f9ad81;
+$hover-link-color: #CB550F; 
+$main-text-color: black;
+$additional-text-color: #F4E8E8;
+$max-width: 950px;
+@mixin main-font {
+    font: {
+        family: Roboto;
+        size: 16px;
+        weight: bold;
+    }
+}
+@mixin second-font {
+    font: {
+        family: Roboto;
+        size: 20px;
+        weight: normal;
+    }
+}
+@mixin ul-no-underline {
+    list-style: none; 
+    padding: 0;
+    margin: 0; 
+}
+@mixin transition {
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;  
+}
+@mixin transition-slow {
+    -webkit-transition: 0.8s;
+    -o-transition: 0.8s;
+    transition: 0.8s;
+}
+
+
+/* Styles for portfolio part of a main page */ 
+
+#portfolio {
+    @include second-font; 
+    margin: 30px auto; 
+    h4 {
+        margin: 2em auto; 
+        letter-spacing: 2px;
+    }
+    p {
+        font-size: 1em; 
+        margin: 0 auto 3em auto;
+        color: $main-text-color; 
+    }
+}
+
+.img-grid {
+    width: 100%; 
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    float: left;
+    margin-bottom: 30px;
+    img {
+        position: relative; 
+        z-index: 10; 
+    }
+    a {
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        right: 0;
+        bottom: 30px; 
+        opacity: 0; 
+        z-index: 12; 
+        background: rgba(68, 72, 83, 0.8); 
+        text-align:center; 
+        @include transition; 
+        div {
+            position: absolute; 
+            bottom: -40px; 
+            left: 0; 
+            text-align: center; 
+            width: 100%; 
+            @include transition-slow; 
+        } 
+        & .image-title {
+            font-size: 16px;
+            color: white; 
+            padding: 0;
+            position:relative; 
+        }
+        & .image-description {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: 2px;
+            display: block; 
+            position: relative;
+            padding-bottom: 7px;
+            text-transform: uppercase; 
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                width: 20px;
+                margin-left: -10px;
+                height: 2px;
+                left: 50%; 
+                background: #f9ad81; 
+            }
+        }
+    }
+    &:hover a {
+        opacity: 1; 
+        div {
+            bottom: 20px;
+        }
+    }
+}
+
+@media screen and (max-width:480px) {
+    .img-grid {
+        margin-bottom: 15px; 
+        a {
+            bottom: 15px;
+        }
+    }
+}

@@ -1,0 +1,113 @@
+$additional-color-rgba: rgba(253, 133, 28, 0.692); 
+$additional-color: #f9ad81; 
+$additional-hover-color: #9e4c1c;
+$additional-hover-text-color: #eeddd4;
+@mixin text-header-font {
+    font: {
+        family: Roboto-Slab;
+        weight: bold;
+        style: normal;
+    }
+}
+@mixin text-font {
+    font: {
+        family: Roboto;
+    }
+}
+@mixin transition {
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;  
+}
+
+#contact {
+    padding-top: 3em;
+    ul.socialNav {
+        margin: 0 auto 3em auto;
+        li {
+            display: inline-block;
+            width: 128px;
+            height: 128px;
+            line-height: 128px;
+            margin: auto auto;
+            div { 
+                margin-top: 15px;
+                a {
+                    color: black;
+                    text-decoration: none;
+                    padding: auto auto;
+                    i {
+                        font-size: 50px;
+                        &:hover {
+                            color: rgb(116, 114, 114);
+                        }
+                    }
+                }
+            }
+            &.centerItem {
+                border-top: 2px solid $additional-color;
+                border-bottom: 2px solid $additional-color;
+            }
+        }
+    }
+    #contactInfo {
+        @include text-font;
+        font-size: 26px;
+        margin: 0 5em;
+        @media screen and (max-width: 768px) {
+            font-size: 24px;
+            margin: 0 2em;
+        }
+        @media screen and (max-width: 576px) {
+            font-size: 20px;
+            margin: 0 1em;
+        }
+    }
+}
+
+#form {
+    @include text-header-font;
+    padding-top: 2.5em;
+    padding-bottom: 4.5em;
+    label {
+        font-size: 16px;
+    }
+    form {
+        width: 100%;
+    } 
+    .form-control:focus {
+        box-shadow: 0 0 0 0.2rem $additional-color-rgba !important;
+    }
+    .additionalInfo {
+        color: $additional-color;
+    }
+    .fieldButton {
+        margin: auto;
+    }
+    .button_submit {
+        background-color: $additional-color;
+        color: rgb(19, 18, 18);
+        @include transition; 
+        &:hover {
+            background-color: $additional-hover-color;
+            color: $additional-hover-text-color;
+            cursor: pointer;
+        }
+    }
+
+    #pickDate {
+        i {
+            color: $additional-color;
+            cursor: pointer;
+            &:hover {
+                color: $additional-hover-color;
+            }
+        }
+    }
+}
+/* this is for the map part of the page ! */ 
+#mapmain {
+    height: 400px;
+    margin: 30px auto 60px auto;
+    width: 100%;
+}

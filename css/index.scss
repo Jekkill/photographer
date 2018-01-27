@@ -1,0 +1,247 @@
+/* COMMON STYLES */   
+
+@mixin text-font {
+    font: {
+        family: Roboto;
+        weight: normal;
+        style: normal; 
+        size: 22px;
+    }
+}
+
+@mixin text-header-font {
+    font: {
+        family: Roboto-Slab;
+        weight: bold;
+        style: normal;
+        size: 36px;
+    }
+    @media screen and (max-width: 768px) {
+        font-size: 34px;
+    }
+}
+
+@mixin transition {
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;  
+}
+
+@mixin transition-slow {
+    -webkit-transition: 0.8s;
+    -o-transition: 0.8s;
+    transition: 0.8s;
+}
+
+/* CAROUSEL STYLES */
+
+#myCarousel {
+    height: 700px !important;
+    overflow: hidden; 
+    .carousel-inner {
+        overflow: visible;
+        img {
+            left: 50%; 
+            max-width: none !important; 
+            min-height: 700px; 
+            min-width: 100%; 
+            position: absolute;
+            top: 200px;
+            transform: translate(-50%, -50%);
+        }
+    }
+    span {
+        font-size: 1.5em;
+    }
+  
+}
+
+/* WHY_ME? STYLES */ 
+
+.article {
+    .iconContainer {
+        margin: 10px auto;
+        width: 128px;
+        height: 128px;
+        line-height: 128px;
+        border: 3px solid black;
+        border-radius: 50%;
+        i {
+            font-size: 85px;
+        }
+    }
+    h3 {
+        @include text-header-font;
+        margin: 30px auto;
+    }
+    p {
+        @include text-font; 
+        text-align: justify;
+        margin: 20px 30px;
+    }
+}
+
+/* PORTFOLIO STYLES */ 
+
+#portfolio {
+    @include text-header-font; 
+    margin: 0px auto; 
+    padding-left: 0;
+    padding-right: 0;
+    .img-thumbnail {
+        padding: 2px !important;
+    }
+    #gallery {
+        margin-left: 0px;
+        margin-right: 0px;
+        .img-grid {
+            width: 100%; 
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            float: left;
+            padding-bottom: 0px;
+            img {
+                position: relative; 
+                z-index: 10; 
+            }
+            a {
+                position: absolute; 
+                top: 0; 
+                left: 0; 
+                right: 0;
+                bottom: 0; 
+                opacity: 0; 
+                z-index: 12; 
+                background: rgba(68, 72, 83, 0.8); 
+                text-align:center; 
+                @include transition; 
+                div {
+                    position: absolute; 
+                    bottom: -150px; 
+                    left: 0; 
+                    text-align: center; 
+                    width: 100%; 
+                    @include transition-slow; 
+                } 
+                & .image-title {
+                    color: white; 
+                    padding: 0;
+                    position:relative; 
+                    letter-spacing: 2px;
+                }
+                & .image-description {
+                    color: rgba(255, 255, 255, 0.4);
+                    font-size: 20px;
+                    font-weight: 400;
+                    letter-spacing: 2px;
+                    display: block; 
+                    position: relative;
+                    padding-bottom: 7px;
+                    text-transform: uppercase; 
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        width: 30px;
+                        margin-left: -10px;
+                        height: 3px;
+                        left: 50%; 
+                        background: #f9ad81; 
+                    }
+                }
+            }
+            &:hover a {
+                opacity: 1; 
+                div {
+                    bottom: 30%;
+                    @media screen and (max-width: 768px) {
+                        bottom: 35%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* FEEDBACK STYLES */ 
+
+#feedback {
+    @include text-font; 
+    padding-bottom: 50px;
+    .owl-prev i, .owl-next i {
+        color: white; 
+        font-size: 30px;
+        @media screen and (max-width:992px) {
+            font-size: 25px;
+        }
+        @media screen and (max-width:768px) {
+            font-size: 20px;
+        }
+        @media screen and (max-width:576px) {
+            font-size: 15px;
+        }
+    }
+    .owl-prev, .owl-next {
+        background-color: rgb(179, 177, 177);
+        position: absolute; 
+        top: 40%; 
+        margin-top: -10px; 
+        &:hover {
+            background-color: rgb(107, 107, 107);
+        }
+    }
+    .owl-prev {
+        left: 0px;
+    }
+    .owl-next {
+        right: 0px;
+    }
+    .media {
+        margin: 20px 100px;
+        @media screen and (max-width:768px) {
+            margin: 20px 50px;
+        }
+        @media screen and (max-width:576px) {
+            margin: 20px 40px;
+        }
+        .media-body {
+            h4 {
+                font-weight: bold;
+                font-style: italic;
+                font-size: 32px;
+                padding-bottom: 15px;
+            }
+            p {
+                font-size: 1em;
+                text-align: justify;
+                margin-right: 50px;
+                font-weight: normal;
+            }
+        }
+        img {
+            height:200px; 
+            width:200px;
+            @media screen and (max-width:768px) {
+                height:150px; 
+                width:150px;
+            }
+            @media screen and (max-width:576px) {
+                height:100px; 
+                width:100px;
+            }
+            margin: auto auto;
+        }
+    }
+    .media-left {
+        h4 {
+            margin-left: 40px;
+        }
+        p {
+            margin-left: 40px;
+            margin-right: 0px !important;
+        }
+    }
+
+}

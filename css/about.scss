@@ -1,0 +1,212 @@
+$main-link-color: #fae8dd;
+$hover-link-color: rgb(129, 121, 116); 
+$main-text-color: rgb(20, 8, 8);
+$additional-text-color: #F4E8E8;
+$max-width: 950px;
+$additional-color: #f9ad81; 
+
+@mixin transition {
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;  
+}
+
+@mixin text-font {
+    font: {
+        family: Roboto;
+    }
+}
+
+@mixin text-header-font {
+    font: {
+        family: Roboto-Slab;
+        weight: bold;
+        style: normal;
+    }
+}
+
+/* Style for about-me division */ 
+
+#aboutme {
+    @include text-font;
+    padding-top: 50px;
+    .media {
+        margin: 10px;
+        img {
+            max-height: 400px;
+            @media screen and (max-width: 768px) {
+                max-width: 200px;
+            }
+        }
+        .media-body {
+            margin: auto 10px;
+            font-size: 1.4em; 
+            line-height: 1.8em;
+            font-weight: normal;
+            h5 {
+                font-size: 1.5em; 
+                line-height: 1.8em; 
+                font-weight: bold;
+                margin: 0px auto 20px 0px; 
+                color: #5b5b6d;
+            }
+            p {
+                text-align: justify;
+                margin-right: 40px;
+            }
+        }
+    }
+}
+
+#aboutStaff {
+    padding-top: 50px;
+    .media {
+        margin: 10px;
+        img {
+            max-height: 400px;
+        }
+        .media-body {
+            margin: auto 10px auto 40px;
+            font-size: 1.2em; 
+            line-height: 1.8em;
+            font-weight: normal;
+            font-family: Roboto;
+            h5 {
+                font-size: 1.5em; 
+                line-height: 1.8em; 
+                font-weight: bold;
+                margin: 0px auto 20px 0px; 
+                color: #5b5b6d;
+            }
+            p {
+                text-align: justify;
+                margin-right: 40px;
+            }
+        }
+    }
+}
+#aboutWork {
+    padding-top: 50px;
+    .media {
+        margin: 10px;
+        img {
+            max-height: 400px;
+        }
+        .media-body {
+            margin: auto 10px;
+            font-size: 1.2em; 
+            line-height: 1.8em;
+            font-weight: normal;
+            font-family: Roboto;
+            h5 {
+                font-size: 1.5em; 
+                line-height: 1.8em; 
+                font-weight: bold;
+                margin: 0px auto 20px 0px; 
+                color: #5b5b6d;
+            }
+            p {
+                text-align: justify;
+                margin-right: 40px;
+            }
+        }
+    }
+}
+#test-feedback {
+    background-color: #34383f;
+}
+
+#endPart {
+    margin-right: 3%;
+}
+
+#myModal {
+    h4 {
+        color: $additional-text-color;
+    }
+    span {
+        color: red;
+    }
+    #warning {
+        color: red;
+    }
+    .well {
+        background-color: #BACDD4;
+    }
+    p {
+        font-size:14px;
+        font-weight: normal;
+    }
+    .buttonSubmit {
+        background-color: $additional-color; 
+        @include transition;
+        &:hover {
+            background-color: #f56c1d;
+        }
+    }
+    .buttonCancel {
+        background-color: #f34723;
+        color: $additional-text-color;
+        @include transition;
+        &:hover {
+            background-color: #962208;
+        }
+    }
+}
+
+#feedback {
+    h2 {
+        @include text-header-font;
+        margin: 10px auto 50px auto;
+        font-size: 2.5em;
+        @media screen and (max-width: 768px) {
+            font-size: 2em;
+        }
+    }
+    .media {
+        img {
+            margin: 20px;
+            height: 140px;
+            width: 140px;
+        }
+        h4.media-heading {
+            font-weight: bold;
+            margin: 20px;
+            span.additionalInfo {
+                font-weight: normal;
+                font-size: 18px;
+            }
+        }
+        p {
+            margin: 20px;
+            font-weight: normal;
+            text-align: justify;
+        }
+        
+    }
+    border-bottom: 2px solid #bfc3ca;
+}
+
+#yourFeedback {
+    button {
+        margin: 10px 30px;
+    }
+    label {
+        @include text-header-font;
+    }
+} 
+
+#leaveFeedback {
+    margin: 4em auto 5em auto;
+    h2 {
+        @include text-header-font;
+        margin: 10px auto 50px auto;
+        font-size: 2.5em;
+        @media screen and (max-width: 768px) {
+            font-size: 2em;
+        }
+    }
+    button {
+        text-align:center;
+    }
+}

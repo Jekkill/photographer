@@ -1,0 +1,73 @@
+#contact {
+  padding-top: 3em; }
+  #contact ul.socialNav {
+    margin: 0 auto 3em auto; }
+    #contact ul.socialNav li {
+      display: inline-block;
+      width: 128px;
+      height: 128px;
+      line-height: 128px;
+      margin: auto auto; }
+      #contact ul.socialNav li div {
+        margin-top: 15px; }
+        #contact ul.socialNav li div a {
+          color: black;
+          text-decoration: none;
+          padding: auto auto; }
+          #contact ul.socialNav li div a i {
+            font-size: 50px; }
+            #contact ul.socialNav li div a i:hover {
+              color: #747272; }
+      #contact ul.socialNav li.centerItem {
+        border-top: 2px solid #f9ad81;
+        border-bottom: 2px solid #f9ad81; }
+  #contact #contactInfo {
+    font-family: Roboto;
+    font-size: 26px;
+    margin: 0 5em; }
+    @media screen and (max-width: 768px) {
+      #contact #contactInfo {
+        font-size: 24px;
+        margin: 0 2em; } }
+    @media screen and (max-width: 576px) {
+      #contact #contactInfo {
+        font-size: 20px;
+        margin: 0 1em; } }
+
+#form {
+  font-family: Roboto-Slab;
+  font-weight: bold;
+  font-style: normal;
+  padding-top: 2.5em;
+  padding-bottom: 4.5em; }
+  #form label {
+    font-size: 16px; }
+  #form form {
+    width: 100%; }
+  #form .form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(253, 133, 28, 0.692) !important; }
+  #form .additionalInfo {
+    color: #f9ad81; }
+  #form .fieldButton {
+    margin: auto; }
+  #form .button_submit {
+    background-color: #f9ad81;
+    color: #131212;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s; }
+    #form .button_submit:hover {
+      background-color: #9e4c1c;
+      color: #eeddd4;
+      cursor: pointer; }
+  #form #pickDate i {
+    color: #f9ad81;
+    cursor: pointer; }
+    #form #pickDate i:hover {
+      color: #9e4c1c; }
+
+/* this is for the map part of the page ! */
+#mapmain {
+  height: 400px;
+  margin: 30px auto 60px auto;
+  width: 100%; }

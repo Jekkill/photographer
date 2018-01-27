@@ -1,0 +1,156 @@
+/* Style for about-me division */
+#aboutme {
+  font-family: Roboto;
+  padding-top: 50px; }
+  #aboutme .media {
+    margin: 10px; }
+    #aboutme .media img {
+      max-height: 400px; }
+      @media screen and (max-width: 768px) {
+        #aboutme .media img {
+          max-width: 200px; } }
+    #aboutme .media .media-body {
+      margin: auto 10px;
+      font-size: 1.4em;
+      line-height: 1.8em;
+      font-weight: normal; }
+      #aboutme .media .media-body h5 {
+        font-size: 1.5em;
+        line-height: 1.8em;
+        font-weight: bold;
+        margin: 0px auto 20px 0px;
+        color: #5b5b6d; }
+      #aboutme .media .media-body p {
+        text-align: justify;
+        margin-right: 40px; }
+
+#aboutStaff {
+  padding-top: 50px; }
+  #aboutStaff .media {
+    margin: 10px; }
+    #aboutStaff .media img {
+      max-height: 400px; }
+    #aboutStaff .media .media-body {
+      margin: auto 10px auto 40px;
+      font-size: 1.2em;
+      line-height: 1.8em;
+      font-weight: normal;
+      font-family: Roboto; }
+      #aboutStaff .media .media-body h5 {
+        font-size: 1.5em;
+        line-height: 1.8em;
+        font-weight: bold;
+        margin: 0px auto 20px 0px;
+        color: #5b5b6d; }
+      #aboutStaff .media .media-body p {
+        text-align: justify;
+        margin-right: 40px; }
+
+#aboutWork {
+  padding-top: 50px; }
+  #aboutWork .media {
+    margin: 10px; }
+    #aboutWork .media img {
+      max-height: 400px; }
+    #aboutWork .media .media-body {
+      margin: auto 10px;
+      font-size: 1.2em;
+      line-height: 1.8em;
+      font-weight: normal;
+      font-family: Roboto; }
+      #aboutWork .media .media-body h5 {
+        font-size: 1.5em;
+        line-height: 1.8em;
+        font-weight: bold;
+        margin: 0px auto 20px 0px;
+        color: #5b5b6d; }
+      #aboutWork .media .media-body p {
+        text-align: justify;
+        margin-right: 40px; }
+
+#test-feedback {
+  background-color: #34383f; }
+
+#endPart {
+  margin-right: 3%; }
+
+#myModal h4 {
+  color: #F4E8E8; }
+
+#myModal span {
+  color: red; }
+
+#myModal #warning {
+  color: red; }
+
+#myModal .well {
+  background-color: #BACDD4; }
+
+#myModal p {
+  font-size: 14px;
+  font-weight: normal; }
+
+#myModal .buttonSubmit {
+  background-color: #f9ad81;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
+  #myModal .buttonSubmit:hover {
+    background-color: #f56c1d; }
+
+#myModal .buttonCancel {
+  background-color: #f34723;
+  color: #F4E8E8;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
+  #myModal .buttonCancel:hover {
+    background-color: #962208; }
+
+#feedback {
+  border-bottom: 2px solid #bfc3ca; }
+  #feedback h2 {
+    font-family: Roboto-Slab;
+    font-weight: bold;
+    font-style: normal;
+    margin: 10px auto 50px auto;
+    font-size: 2.5em; }
+    @media screen and (max-width: 768px) {
+      #feedback h2 {
+        font-size: 2em; } }
+  #feedback .media img {
+    margin: 20px;
+    height: 140px;
+    width: 140px; }
+  #feedback .media h4.media-heading {
+    font-weight: bold;
+    margin: 20px; }
+    #feedback .media h4.media-heading span.additionalInfo {
+      font-weight: normal;
+      font-size: 18px; }
+  #feedback .media p {
+    margin: 20px;
+    font-weight: normal;
+    text-align: justify; }
+
+#yourFeedback button {
+  margin: 10px 30px; }
+
+#yourFeedback label {
+  font-family: Roboto-Slab;
+  font-weight: bold;
+  font-style: normal; }
+
+#leaveFeedback {
+  margin: 4em auto 5em auto; }
+  #leaveFeedback h2 {
+    font-family: Roboto-Slab;
+    font-weight: bold;
+    font-style: normal;
+    margin: 10px auto 50px auto;
+    font-size: 2.5em; }
+    @media screen and (max-width: 768px) {
+      #leaveFeedback h2 {
+        font-size: 2em; } }
+  #leaveFeedback button {
+    text-align: center; }

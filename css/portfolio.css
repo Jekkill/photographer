@@ -1,0 +1,79 @@
+/* Styles for portfolio part of a main page */
+#portfolio {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: normal;
+  margin: 30px auto; }
+  #portfolio h4 {
+    margin: 2em auto;
+    letter-spacing: 2px; }
+  #portfolio p {
+    font-size: 1em;
+    margin: 0 auto 3em auto;
+    color: black; }
+
+.img-grid {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  margin-bottom: 30px; }
+  .img-grid img {
+    position: relative;
+    z-index: 10; }
+  .img-grid a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    opacity: 0;
+    z-index: 12;
+    background: rgba(68, 72, 83, 0.8);
+    text-align: center;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s; }
+    .img-grid a div {
+      position: absolute;
+      bottom: -40px;
+      left: 0;
+      text-align: center;
+      width: 100%;
+      -webkit-transition: 0.8s;
+      -o-transition: 0.8s;
+      transition: 0.8s; }
+    .img-grid a .image-title {
+      font-size: 16px;
+      color: white;
+      padding: 0;
+      position: relative; }
+    .img-grid a .image-description {
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      display: block;
+      position: relative;
+      padding-bottom: 7px;
+      text-transform: uppercase; }
+      .img-grid a .image-description:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 20px;
+        margin-left: -10px;
+        height: 2px;
+        left: 50%;
+        background: #f9ad81; }
+  .img-grid:hover a {
+    opacity: 1; }
+    .img-grid:hover a div {
+      bottom: 20px; }
+
+@media screen and (max-width: 480px) {
+  .img-grid {
+    margin-bottom: 15px; }
+    .img-grid a {
+      bottom: 15px; } }

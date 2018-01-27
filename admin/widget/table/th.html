@@ -1,0 +1,9 @@
+<tr>
+	<? foreach($head as $th): ?>
+		<? if ($th == 'Управление'): ?> 
+			<th colspan="2"><?= $th ?></th>
+		<? else: ?>
+			<th><?= $th ?></th>
+		<? endif ?>
+	<? endforeach ?>
+</tr>

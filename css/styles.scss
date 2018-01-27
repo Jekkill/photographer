@@ -1,0 +1,259 @@
+/* FONTS */
+@font-face {
+    font-family: 'Roboto'; 
+    src: url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal; 
+    font-style: normal; 
+};
+@font-face {
+    font-family: 'Roboto'; 
+    src: url('../fonts/Roboto/Roboto-Bold.ttf') format('truetype');
+    font-weight: bold; 
+    font-style: normal; 
+};
+@font-face {
+    font-family: 'Roboto'; 
+    src: url('../fonts/Roboto/Roboto-BoldItalic.ttf') format('truetype');
+    font-weight: bold; 
+    font-style: italic; 
+};
+@font-face {
+    font-family: 'Roboto-Slab'; 
+    src: url('../fonts/Roboto_Slab/RobotoSlab-Bold.ttf') format('truetype');
+    font-weight: normal; 
+    font-style: normal; 
+};
+@font-face {
+    font-family: 'Roboto-Slab'; 
+    src: url('../fonts/Roboto_Slab/RobotoSlab-Regular.ttf') format('truetype');
+    font-weight: normal; 
+    font-style: normal; 
+};
+@font-face {
+    font-family: 'Alegreya'; 
+    src: url('../fonts/Alegreya/Alegreya-Bold.ttf') format('truetype');
+    font-weight: bold; 
+    font-style: normal; 
+}
+/* VARIABLES AND MIXINS */
+$main-link-color: #fae8dd;
+$hover-link-color: rgb(129, 121, 116); 
+$main-text-color: rgb(20, 8, 8);
+$additional-text-color: #F4E8E8;
+@mixin text-font {
+    font: {
+        family: Roboto;
+    }
+}
+@mixin text-header-font {
+    font: {
+        family: Roboto-Slab;
+        weight: bold;
+        style: normal;
+    }
+}
+@mixin ul-no-underline {
+    list-style: none; 
+    padding: 0;
+    margin: 0; 
+}
+@mixin transition {
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;  
+}
+@mixin transition-slow {
+    -webkit-transition: 0.8s;
+    -o-transition: 0.8s;
+    transition: 0.8s;
+}
+@mixin header-font {
+    font: {
+        family: 'Alegreya', serif; 
+        weight: 700; 
+        size: 70px; 
+    }
+    text-transform: uppercase; 
+    color: $main-text-color; 
+    @media screen and (max-width: 768px) {
+        font-size: 60px;
+    }
+    @media screen and (max-width: 480px) {
+        font-size: 50px;
+    }
+}
+
+/* COMMON STYLES FOR ALL PAGES  */
+body {
+    .divisionTitle {
+        margin: 50px auto; 
+        h2 {
+            @include header-font;
+        }
+        p {
+            @include text-header-font;
+            font-size: 30px;
+            letter-spacing: 1px;
+            @media screen and (max-width:480px) {
+                font-size: 24px;
+            }
+        }
+    }
+    padding-top: 60px;
+    background: transparent url(../img/grey-linen.png) repeat fixed;
+    @media screen and (max-width: 750px) {
+        padding-top: 60px !important;
+    }
+    ul {
+        @include ul-no-underline;
+    }
+    .grey-linen-background {
+        background: transparent url(../img/grey-linen.png) repeat;
+    }
+    .linen-background {
+        background: transparent url(../img/black_linen_v2.png) repeat;
+    }
+}
+
+
+
+/* NAVBAR STYLES  */ 
+.navbar {
+    @include text-header-font;
+    font-size: 18px;
+    letter-spacing: 1px;
+    @media screen and (max-width:1200px) {
+        font-size: 16px;
+    } 
+    .nav-item {
+       margin: auto;
+    }
+    background: transparent url(../img/black_linen_v2.png) repeat;
+    .dropdown-menu {
+        background: transparent url(../img/black_linen_v2.png) repeat; 
+        a.dropdown-item:active {
+            border: none;
+        }
+        a.dropdown-item {
+            color: $main-link-color;
+            background-color: transparent url(../img/black_linen_v2.png) repeat; 
+            .active {
+                border-bottom: 1px solid $hover-link-color;
+            }
+        }
+        a.dropdown-item:hover {
+            background-color: transparent url(../img/black_linen_v2.png) repeat; 
+            color: $hover-link-color;
+        }
+
+    }
+    #nav-content {
+        ul.navbar-nav {
+            .nav-item {
+                @include transition-slow; 
+                a.nav-link {
+                    margin:auto 0;
+                    color: $main-link-color; 
+                    font-weight: bold;
+                    font-size: 1.2em;
+                    &:visited {
+                        color: $additional-text-color;
+                    }
+                    &:hover {
+                        color: $hover-link-color;
+                    }
+                }
+                a.active {
+                    color: $hover-link-color; 
+                }
+                a.nav-link:active {
+                    border: none;
+                }
+                .navbar-brand {
+                    margin: 0px 30px;
+                }
+            }
+            .active a {
+                color: black;            
+            }
+        }
+    }
+    button.navbar-toggler { 
+        i {
+            color: $additional-text-color;
+            font-size: 2em;
+        }
+    }
+    @media screen and (max-width: 992px) {
+        .nav-item {
+            margin-left: 10px;
+        }
+    }
+    @media screen and (max-width: 350px) {
+       .navbar-brand {
+            img {
+                max-width: 150px;
+            }
+        } 
+    }
+}
+
+
+/* Footer styles */ 
+
+#footer {
+    background: transparent url(../img/black_linen_v2.png) repeat;
+    margin: 0px auto; 
+    p#created {
+        margin: 20px auto 0px auto; 
+        font-weight: 400;
+        font-size: 0.8em;
+        a {
+            color: $main-link-color;
+            @include transition;
+            font-weight: 400;
+            &:hover {
+                color: $hover-link-color;
+            }
+        }
+    }
+    #footerContacts {
+        margin-left: auto;
+        margin-top: 20px;
+        padding-right: 70px;
+    }
+    #contactMe li {
+        margin: 10px 50px 10px auto; 
+        a {
+            color: $main-link-color; 
+            font-weight: 400;
+            &:hover {
+                color: $hover-link-color;
+                text-decoration: none;
+            }
+        }
+        i {
+            font-size: 40px; 
+            color: $additional-text-color;
+            margin-right: 10px;
+            @include transition;
+            &:hover {
+                color: $hover-link-color;
+            }
+            @media screen and (max-width: 576px) {
+                font-size: 30px;
+            }
+        }
+    }
+    p {
+        color: $additional-text-color;
+        font-weight: 400;
+        font-size: 1em;
+    }
+    .smallLogo {
+        margin-top: 50px;
+        margin-left: 50px;
+    }
+
+
+}

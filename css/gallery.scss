@@ -1,0 +1,30 @@
+@mixin text-font {
+    font: {
+        family: Roboto;
+    }
+}
+
+body {
+  margin-top: 10px; }
+  @media screen and (max-width: 768px) {
+    body body {
+      margin-top: 0px; } }
+
+.col-col-xs-6, .col-sm-4, .col-md-3, .col-sm-8, .col-md-4 {
+  padding: 0px;
+  margin: 0px;
+}
+
+
+.img-thumbnail {
+  padding: 2px !important;
+}
+
+.portfolio p {
+  @include text-font;
+  font-size: 1.5em;
+  margin-bottom: 70px;
+  @media screen and (max-width: 768px) {
+    font-size: 1.2em;
+  }
+}

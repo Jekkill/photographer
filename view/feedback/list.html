@@ -1,0 +1,21 @@
+<? $id = 1 ?> 
+<? foreach($feedbacks as $feedback): ?>
+	<? if ($id%2 != 0) : ?>  
+		<div class="media"> 
+			<div class="media-body"> 
+				<h4 class = "media-heading"> <?= $feedback['name'] ?> <span class="d-flex justify-content-end additionalInfo"> <?= $feedback['feedbackDate'] ?> </span> </h4> 
+				<p> <?= $feedback['message'] ?> </p>
+			</div>
+			<img src="./feedback_images/<?= $feedback['image'] ?>" class="d-flex align-self-center rounded-circle"> 
+		</div>
+	<? else: ?> 
+		<div class="media"> 
+            <img src="./feedback_images/<?= $feedback['image'] ?>" class="d-flex align-self-center rounded-circle">
+            <div class="media-body"> 
+               <h4 class = "media-heading"> <?= $feedback['name'] ?> <span class="d-flex justify-content-end additionalInfo"> <?= $feedback['feedbackDate'] ?> </span> </h4> 
+                <p> <?= $feedback['message'] ?> </p>
+            </div>
+        </div>
+    <? endif ?>
+    <? $id += 1 ?>
+<? endforeach ?>
